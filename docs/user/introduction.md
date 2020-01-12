@@ -1,13 +1,11 @@
-## Introduction
+# Introduction
 
 
-What This Is
-============
+## What This Is
 
 Welcome to Spinning Up in Deep RL! This is an educational resource produced by OpenAI that makes it easier to learn about deep reinforcement learning (deep RL).
 
-Why We Built This
-=================
+## Why We Built This
 
 One of the single most common questions that we hear is
 
@@ -29,44 +27,4 @@ So our package here is designed to serve as the missing middle step for people w
 That said, practitioners aren't the only people who can (or should) benefit from these materials. Solving AI safety will require people with a wide range of expertise and perspectives, and many relevant professions have no connection to engineering or computer science at all. Nonetheless, everyone involved will need to learn enough about the technology to make informed decisions, and several pieces of Spinning Up address that need.
 
 
-
-How This Serves Our Mission
-===========================
-
-OpenAI's mission_ is to ensure the safe development of AGI and the broad distribution of benefits from AI more generally. Teaching tools like Spinning Up help us make progress on both of these objectives.
-
-To begin with, we move closer to broad distribution of benefits any time we help people understand what AI is and how it works. This empowers people to think critically about the many issues we anticipate will arise as AI becomes more sophisticated and important in our lives.
-
-Also, critically, `we need people to help <https://jobs.lever.co/openai>`_ us work on making sure that AGI is safe. This requires a skill set which is currently in short supply because of how new the field is. We know that many people are interested in helping us, but don't know how---here is what you should study! If you can become an expert on this material, you can make a difference on AI safety.
-
-
-
-Code Design Philosophy
-======================
-
-The algorithm implementations in the Spinning Up repo are designed to be
-
-    - as simple as possible while still being reasonably good,
-    - and highly-consistent with each other to expose fundamental similarities between algorithms.
-
-They are almost completely self-contained, with virtually no common code shared between them (except for logging, saving, loading, and `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`_ utilities), so that an interested person can study each algorithm separately without having to dig through an endless chain of dependencies to see how something is done. The implementations are patterned so that they come as close to pseudocode as possible, to minimize the gap between theory and code.
-
-Importantly, they're all structured similarly, so if you clearly understand one, jumping into the next is painless.
-
-We tried to minimize the number of tricks used in each algorithm's implementation, and minimize the differences between otherwise-similar algorithms. To give some examples of removed tricks: we omit regularization_ terms present in the original Soft-Actor Critic code, as well as `observation normalization`_ from all algorithms. For an example of where we've removed differences between algorithms: our implementations of DDPG, TD3, and SAC all follow a convention laid out in the `original TD3 code`_, where all gradient descent updates are performed at the ends of episodes (instead of happening all throughout the episode).
-
-All algorithms are "reasonably good" in the sense that they achieve roughly the intended performance, but don't necessarily match the best reported results in the literature on every task. Consequently, be careful if using any of these implementations for scientific benchmarking comparisons. Details on each implementation's specific performance level can be found on our `benchmarks`_ page.
-
-
-Support Plan
-============
-
-We plan to support Spinning Up to ensure that it serves as a helpful resource for learning about deep reinforcement learning. The exact nature of long-term (multi-year) support for Spinning Up is yet to be determined, but in the short run, we commit to:
-
-- High-bandwidth support for the first three weeks after release (Nov 8, 2018 to Nov 29, 2018).
-
-    + We'll move quickly on bug-fixes, question-answering, and modifications to the docs to clear up ambiguities.
-    + We'll work hard to streamline the user experience, in order to make it as easy as possible to self-study with Spinning Up.
-
-- Approximately six months after release (in April 2019), we'll do a serious review of the state of the package based on feedback we receive from the community, and announce any plans for future modification, including a long-term roadmap.
 
