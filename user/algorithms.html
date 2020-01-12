@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Algorithms &mdash; All things Astroinfomatics  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/openai_icon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/modify.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo_transparent.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Science</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data-science/ml-mathematics.html">Mathematical Foundations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Engineering</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data-engineering/data-formats.html">Data Formats</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research Engineering</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research-engineering/tools.html">Tools of the Trade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research-engineering/best-prac.html">Best Practises</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Etc.</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/author.html">About the Author</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">All things Astroinfomatics</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Algorithms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/algorithms.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="algorithms">
+<h1>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="what-s-included">
+<h1>What&#8216;s Included<a class="headerlink" href="#what-s-included" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="why-these-algorithms">
+<h1>Why These Algorithms?<a class="headerlink" href="#why-these-algorithms" title="Permalink to this headline">¶</a></h1>
+<p>We chose the core deep RL algorithms in this package to reflect useful progressions of ideas from the recent history of the field, culminating in two algorithms in particular&#8212;PPO and SAC&#8212;which are close to state of the art on reliability and sample efficiency among policy-learning algorithms. They also expose some of the trade-offs that get made in designing and using algorithms in deep RL.</p>
+<div class="section" id="the-on-policy-algorithms">
+<h2>The On-Policy Algorithms<a class="headerlink" href="#the-on-policy-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>Vanilla Policy Gradient is the most basic, entry-level algorithm in the deep RL space because it completely predates the advent of deep RL altogether. The core elements of VPG go all the way back to the late 80s / early 90s. It started a trail of research which ultimately led to stronger algorithms such as TRPO and then PPO soon after.</p>
+<p>A key feature of this line of work is that all of these algorithms are <em>on-policy</em>: that is, they don&#8216;t use old data, which makes them weaker on sample efficiency. But this is for a good reason: these algorithms directly optimize the objective you care about&#8212;policy performance&#8212;and it works out mathematically that you need on-policy data to calculate the updates. So, this family of algorithms trades off sample efficiency in favor of stability&#8212;but you can see the progression of techniques (from VPG to TRPO to PPO) working to make up the deficit on sample efficiency.</p>
+</div>
+<div class="section" id="the-off-policy-algorithms">
+<h2>The Off-Policy Algorithms<a class="headerlink" href="#the-off-policy-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>DDPG is a similarly foundational algorithm to VPG, although much younger&#8212;the theory of deterministic policy gradients, which led to DDPG, wasn&#8216;t published until 2014. DDPG is closely connected to Q-learning algorithms, and it concurrently learns a Q-function and a policy which are updated to improve each other.</p>
+<p>Algorithms like DDPG and Q-Learning are <em>off-policy</em>, so they are able to reuse old data very efficiently. They gain this benefit by exploiting Bellman&#8216;s equations for optimality, which a Q-function can be trained to satisfy using <em>any</em> environment interaction data (as long as there&#8216;s enough experience from the high-reward areas in the environment).</p>
+<p>But problematically, there are no guarantees that doing a good job of satisfying Bellman&#8216;s equations leads to having great policy performance. <em>Empirically</em> one can get great performance&#8212;and when it happens, the sample efficiency is wonderful&#8212;but the absence of guarantees makes algorithms in this class potentially brittle and unstable. TD3 and SAC are descendants of DDPG which make use of a variety of insights to mitigate these issues.</p>
+</div>
+</div>
+<div class="section" id="code-format">
+<h1>Code Format<a class="headerlink" href="#code-format" title="Permalink to this headline">¶</a></h1>
+<p>All implementations in Spinning Up adhere to a standard template. They are split into two files: an algorithm file, which contains the core logic of the algorithm, and a core file, which contains various utilities needed to run the algorithm.</p>
+<div class="section" id="the-algorithm-file">
+<h2>The Algorithm File<a class="headerlink" href="#the-algorithm-file" title="Permalink to this headline">¶</a></h2>
+<p>The algorithm file always starts with a class definition for an experience buffer object, which is used to store information from agent-environment interactions.</p>
+<p>Next, there is a single function which runs the algorithm, performing the following tasks (in this order):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1) Logger setup
+
+2) Random seed setting
+
+3) Environment instantiation
+
+4) Making placeholders for the computation graph
+
+5) Building the actor-critic computation graph via the ``actor_critic`` function passed to the algorithm function as an argument
+
+6) Instantiating the experience buffer
+
+7) Building the computation graph for loss functions and diagnostics specific to the algorithm
+
+8) Making training ops
+
+9) Making the TF Session and initializing parameters
+
+10) Setting up model saving through the logger
+
+11) Defining functions needed for running the main loop of the algorithm (e.g. the core update function, get action function, and test agent function, depending on the algorithm)
+
+12) Running the main loop of the algorithm:
+
+    a) Run the agent in the environment
+
+    b) Periodically update the parameters of the agent according to the main equations of the algorithm
+
+    c) Log key performance metrics and save agent
+</pre></div>
+</div>
+<p>Finally, there&#8216;s some support for directly running the algorithm in Gym environments from the command line.</p>
+</div>
+<div class="section" id="the-core-file">
+<h2>The Core File<a class="headerlink" href="#the-core-file" title="Permalink to this headline">¶</a></h2>
+<p>The core files don&#8216;t adhere as closely as the algorithms files to a template, but do have some approximate structure:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1) Functions related to making and managing placeholders
+
+2) Functions for building sections of computation graph relevant to the ``actor_critic`` method for a particular algorithm
+
+3) Any other useful functions
+
+4) Implementations for an MLP actor-critic compatible with the algorithm, where both the policy and the value function(s) are represented by simple MLPs
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, astroinformatics.xyz.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
