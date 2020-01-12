@@ -38,11 +38,11 @@ source_parsers = {
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-# extensions = ['sphinx.ext.imgmath',
-extensions = [
+extensions = ['sphinx.ext.imgmath',
+# extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
-    'sphinx.ext.mathjax',
+    # 'sphinx.ext.mathjax',
     'sphinx.ext.napoleon']
 
 # 'sphinx.ext.mathjax', ??
@@ -187,8 +187,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'SpinningUp.tex', 'Spinning Up Documentation',
-     'Joshua Achiam', 'manual'),
+    (master_doc, 'AstroinfomaticsXYZdoc.tex', 'Spinning Up Documentation',
+     'Tarek Allam', 'manual'),
 ]
 
 
@@ -197,7 +197,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'spinningup', 'Spinning Up Documentation',
+    (master_doc, 'astroinfomatics.xyz', 'AstroinfomaticsXYZ Documentation',
      [author], 1)
 ]
 
@@ -208,7 +208,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'SpinningUp', 'Spinning Up Documentation',
+    (master_doc, 'AstroinfomaticsXYZ', 'AstroinfomaticsXYZ Documentation',
      author, 'SpinningUp', 'One line description of project.',
      'Miscellaneous'),
 ]
