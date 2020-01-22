@@ -1,7 +1,7 @@
 Welcome to All Things Astroinformatics!
 =======================================
 
-.. image:: images/nasa-unsplash.jpg
+.. image:: images/nasa-unsplash-cropped.jpg
 
 .. toctree::
    :maxdepth: 2
