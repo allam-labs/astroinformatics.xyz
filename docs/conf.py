@@ -187,7 +187,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'AstroinfomaticsXYZdoc.tex', 'Spinning Up Documentation',
+    (master_doc, 'AstroinfomaticsXYZdoc.tex', 'AstroINFO Documentation',
      'Tarek Allam', 'manual'),
 ]
 
