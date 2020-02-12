@@ -10,6 +10,9 @@ if [ "$CONDA_DEFAULT_ENV" == "astroxyz" ]; then
 
 else
 
-    echo "CONDA_DEFAULT_ENV != astroxyz \n\n
-            Run 'conda activate astroxyz'"
+    echo "
+            CONDA_DEFAULT_ENV != astroxyz
+
+            Run 'conda activate astroxyz'
+         "
 fi
