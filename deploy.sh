@@ -12,3 +12,4 @@ else
 
     echo "CONDA_DEFAULT_ENV != astroxyz \n\n
             Run 'conda activate astroxyz'"
+fi
