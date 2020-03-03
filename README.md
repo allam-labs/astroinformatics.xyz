@@ -35,3 +35,29 @@ else
 (spinningup) 11:32:02 ✔ ~/www/astroinformatics.xyz/docs/_build/html (gh-pages) :: git push
 
 ```
+
+## TOC Plans
+
+* Overview
+    * Introduction
+    * 21st Century Astronomy
+* Data Science
+    * Mathematical Foundations
+    * Data Structures
+    * Algorithms
+* Data Engineering
+    * Data Formats
+    * Database Internals
+    * Distributed Systems
+* Research Engineering
+    * Tools of the Trade
+        - Version Control
+        - Editors
+        - TMUX
+    * Best Practises
+        - Git logs
+        - Branching models
+    * Containers
+        - Docker
+        - Kubernetes
+    * Testing
